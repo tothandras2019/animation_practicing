@@ -12,7 +12,7 @@ body {
 }
 
 section {
-  background-image: url("../IMGS/sumflover.jfif");
+  /* background-image: url("../IMGS/sumflover.jfif"); */
   background-repeat: repeat-y;
   background-size: contain;
   position: relative;
@@ -27,7 +27,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 100px;
+  text-align: center;
   background-color: var(--card-background-color);
   box-shadow: 10px 10px 20px var(--shadow-color-glass);
   backdrop-filter: blur(1px);
@@ -126,10 +126,12 @@ section {
   left: 50%;
   width: 100px;
   height: 100px;
-  animation: cubeRotate;
+  font-size: 100px;
+  animation: cubeRotate, cubeMovement;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  animation-direction: alternate;
   transform-style: preserve-3d;
 }
 
@@ -178,6 +180,20 @@ section {
 
 @keyframes cubeRotate {
   to {
+    top: 50%;
+    left: 50%;
     transform: rotate3d(1, 1, 1, 360deg);
+  }
+}
+
+@keyframes cubeMovement {
+  from {
+    top: 20%;
+    left: 20%;
+  }
+
+  to {
+    top: 60%;
+    left: 60%;
   }
 }
