@@ -37,12 +37,12 @@
 }
 
 .dot__inner {
+  width: 30px;
+  height: 30px;
   position: absolute;
   top: var(--top-width);
   left: var(--top-height);
   transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
   background-color: bisque;
   border-radius: 50%;
   transition: all 1s;
