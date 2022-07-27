@@ -8,16 +8,17 @@ dotCircle.addEventListener(`mousemove`, OnMouseMove.bind(dotInner));
 dotCircle.addEventListener(`mouseleave`, OnMouseLeave);
 
 function OnMouseMove(event) {
-  console.log(event);
+  // console.log(event);
   let moveToX = event.offsetX;
   let moveToY = event.offsetY;
 
+  // let innerXPos = window.getComputedStyle(dotInner);
+  // let rect = innerXPos.getBoundingClientRect();
+  // console.log(rect);
+
   dotInner.style.setProperty(`top`, `${moveToY}%`);
   dotInner.style.setProperty(`left`, `${moveToX}%`);
-  dotInner.style.setProperty(
-    `transform`,
-    `translate(-${moveToX}%, -${moveToY}%)`,
-  );
+  dotInner.style.setProperty(`transform`, `translate(-${moveToX}%, -${moveToY}%)`);
 }
 
 function OnMouseLeave(event) {
