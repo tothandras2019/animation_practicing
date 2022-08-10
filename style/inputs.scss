@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    .input--container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      height: 50%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      form {
+        width: 65%;
+        height: 50%;
+        background-color: rgb(90, 161, 219);
+        padding: 0 20px;
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        div {
+          position: relative;
+          width: 70%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: left;
+          padding-right: 10px;
+
+          #name-input,
+          #age-input {
+            width: 80%;
+            height: 30px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid rgb(10, 72, 129);
+          }
+
+          .name--span:before,
+          .age--span::before {
+            color: rgb(2, 27, 95);
+            position: absolute;
+            font-size: 22px;
+            letter-spacing: 3px;
+            pointer-events: none;
+            transition: all 0.8s;
+          }
+
+          .name--span:before {
+            content: "Your name here";
+          }
+
+          .age--span::before {
+            content: "Your age here";
+          }
+
+          .moveUp:before {
+            // animation-name: move;
+            // animation-duration: 0.5s;
+            // animation-fill-mode: forwards;
+            font-size: 18px;
+            transition: all 0.5s;
+            transform: translateY(-20px);
+          }
+
+          @keyframes move {
+            to {
+              transform: translateY(-25px);
+              color: rgb(43, 98, 180);
+              font-size: 25px;
+            }
+          }
+
+          // .name--span:hover:before {
+          //   top: 25px;
+          // }
+
+          // .age--span:hover:before {
+          //   top: 95px;
+          // }
+
+          #submit-input {
+            width: 120px;
+          }
+        }
+        p {
+          width: 55%;
+          padding-top: 15px;
+        }
+      }
+    }
+  }
+}
