@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #5e8dc2;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  .loading {
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .rect {
+      width: 100%;
+      height: 100%;
+      fill: transparent;
+    }
+
+    .circles {
+      width: 100%;
+      height: 100%;
+    }
+
+    .text {
+      font-size: 30px;
+    }
+  }
+}

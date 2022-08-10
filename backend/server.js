@@ -66,6 +66,7 @@ const server = http.createServer((req, res) => {
   let filePath = path.resolve(__dirname + "/../" + req.url);
   const neonBtns = "/neonbuttons.html";
   const cardmovement = "/cardmovement.html";
+  const loading = "/loading.html";
 
   fs.access(filePath, fs.constants.R_OK, (err) => {
     if (err) {
@@ -73,7 +74,7 @@ const server = http.createServer((req, res) => {
       res.end(errorHTML);
     } else {
       if (fs.statSync(filePath).isDirectory()) {
-        filePath += neonBtns;
+        filePath += loading;
       }
       fs.readFile(filePath, "binary", (err, data) => {
         if (err) {
