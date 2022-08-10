@@ -1,6 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 * {
   padding: 0;
   margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 #root {
@@ -47,37 +49,55 @@
   height: 30px;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid rgb(10, 72, 129);
+  outline: none;
 }
 #root .container .input--container form div .name--span:before,
 #root .container .input--container form div .age--span::before {
-  color: rgb(2, 27, 95);
+  color: rgb(33, 51, 102);
   position: absolute;
   font-size: 22px;
   letter-spacing: 3px;
   pointer-events: none;
   transition: all 0.8s;
 }
+#root .container .input--container form div .name--span:after,
+#root .container .input--container form div .age--span::after {
+  width: 80%;
+  height: 2px;
+  content: "";
+  position: absolute;
+  background-color: rgb(30, 65, 94);
+}
+#root .container .input--container form div .name--span:after {
+  top: 70px;
+  left: 0;
+}
+#root .container .input--container form div .age--span::after {
+  top: 140px;
+  left: 0;
+}
 #root .container .input--container form div .name--span:before {
-  content: "Your name here";
+  content: "Name here";
 }
 #root .container .input--container form div .age--span::before {
-  content: "Your age here";
+  content: "Age here";
 }
 #root .container .input--container form div .moveUp:before {
   font-size: 18px;
-  transition: all 0.5s;
+  transition: all 0.3s;
   transform: translateY(-20px);
-}
-@keyframes move {
-  to {
-    transform: translateY(-25px);
-    color: rgb(43, 98, 180);
-    font-size: 25px;
-  }
 }
 #root .container .input--container form div #submit-input {
   width: 120px;
+  height: 25px;
+  border: none;
+  background-color: rgb(30, 65, 94);
+  transition: all 0.4s;
+  color: white;
+}
+#root .container .input--container form div #submit-input:hover {
+  background-color: rgb(3, 13, 36);
+  letter-spacing: 2px;
 }
 #root .container .input--container form p {
   width: 55%;

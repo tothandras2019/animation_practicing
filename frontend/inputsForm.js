@@ -4,33 +4,36 @@ const form = document.querySelector(`form`);
 const inputNameListener = form.querySelector(`#name-input`);
 const inputAgeListener = form.querySelector(`#age-input`);
 
+const nameSpan = form.querySelector(`.name--span`);
+const ageSpan = form.querySelector(`.age--span`);
+
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   const inputName = event.target.querySelector(`#name-input`);
   const inputAge = event.target.querySelector(`#age-input`);
-  console.log(event.target);
   console.log(inputName.value, inputAge.value);
+  inputName.value = "";
+  inputAge.value = "";
 });
+
+let isFocusName = true;
+let isFocusAge = true;
 
 inputNameListener.addEventListener(`mouseenter`, (event) => {
-  event.target.closest(`.name--span`).classList.add(`moveUp`);
-  // console.log(event.target);
+  nameSpan.classList.add(`moveUp`);
 });
-
-inputAgeListener.addEventListener(`mouseenter`, (event) => {
-  event.target.closest(`.age--span`).classList.add(`moveUp`);
-  // console.log(event.target);
-});
-
-inputNameListener.addEventListener(`mouseleave`, (event) => {
-  console.log(inputNameListener.value);
-  if (inputNameListener.value === ``) {
-    event.target.closest(`.name--span`).classList.remove(`moveUp`);
+inputNameListener.addEventListener(`blur`, (event) => {
+  if (inputNameListener.value === `` && inputAgeListener.value === ``) {
+    nameSpan.classList.remove(`moveUp`);
   }
 });
 
-inputAgeListener.addEventListener(`mouseleave`, (event) => {
-  if (inputAgeListener.value === ``) {
-    event.target.closest(`.age--span`).classList.remove(`moveUp`);
+inputAgeListener.addEventListener(`mouseenter`, (event) => {
+  ageSpan.classList.add(`moveUp`);
+});
+
+inputAgeListener.addEventListener(`blur`, (event) => {
+  if (inputNameListener.value === `` && inputAgeListener.value === ``) {
+    ageSpan.classList.remove(`moveUp`);
   }
 });
