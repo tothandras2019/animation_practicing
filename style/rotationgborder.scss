@@ -75,11 +75,11 @@ body {
         background: $element-basic-background-color;
         backdrop-filter: blur(20px);
         text-align: center;
+        text-transform: uppercase;
         color: $text-color;
         font-size: 15px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
         font-weight: 800;
+        letter-spacing: 2px;
         border: transparent;
         border-radius: 50%;
         transition: letter-spacing 0.1s;

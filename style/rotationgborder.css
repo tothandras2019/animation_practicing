@@ -68,11 +68,11 @@ body {
   background: rgba(112, 40, 112, 0.678);
   backdrop-filter: blur(20px);
   text-align: center;
+  text-transform: uppercase;
   color: rgb(226, 226, 220);
   font-size: 15px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
   font-weight: 800;
+  letter-spacing: 2px;
   border: transparent;
   border-radius: 50%;
   transition: letter-spacing 0.1s;
