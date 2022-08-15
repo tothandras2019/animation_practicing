@@ -1,0 +1,76 @@
+$base-background-color: rgb(94, 137, 216);
+$container-background-color: rgb(57, 131, 150);
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+}
+
+body {
+  background-color: $base-background-color;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .counter-container {
+    width: 600px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+    border-radius: 5px;
+    background-color: $container-background-color;
+
+    .counter {
+      position: relative;
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 3px;
+      font-size: 100px;
+      gap: 15px;
+
+      div {
+        min-height: 120px;
+        min-width: 130px;
+      }
+
+      div:nth-child(1) {
+        font-size: 140px;
+        align-self: baseline;
+        text-align: right;
+        padding-bottom: 30px;
+        min-width: 100px;
+      }
+
+      div:nth-child(3) {
+        position: absolute;
+        top: 0px;
+        left: 410px;
+        min-width: 120px;
+        font-size: 40px;
+        text-align: center;
+      }
+    }
+
+    button {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      letter-spacing: 3px;
+      font-weight: 700;
+      box-shadow: 3px 3px 8px rgb(13, 39, 59);
+      border: 3px solid rgb(13, 39, 59);
+      transition: all 0.5s;
+    }
+  }
+}
