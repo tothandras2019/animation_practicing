@@ -8,7 +8,7 @@ const milSec = counter.querySelector(`.mil-sec`);
 const btnReset = document.querySelector(`.btn-reset`);
 
 let minutes = 2;
-let secundum = 59;
+let secundum = 58;
 let milliSec = 1000;
 let milSID = null;
 
