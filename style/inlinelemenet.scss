@@ -31,7 +31,7 @@ h1 {
 h2 {
   width: 100%;
   font-size: 30px;
-  letter-spacing: 2.5px;
+  letter-spacing: 3.5px;
   word-spacing: 5px;
   text-align: center;
   padding: 20px 0;
@@ -53,7 +53,8 @@ h2 {
 
     .menu {
       display: grid;
-      grid-template-columns: $side-width $side-width $side-width $side-width $side-width;
+      grid-template-columns: repeat(5, $side-width);
+
       gap: 30px;
       span {
         position: relative;
@@ -120,7 +121,7 @@ h2 {
     backdrop-filter: blur(3px);
     form {
       position: relative;
-      width: 500px;
+      width: 412px;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -129,7 +130,7 @@ h2 {
       gap: 10px;
 
       div {
-        width: 70%;
+        width: 90%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -141,18 +142,18 @@ h2 {
         #user__2 {
           background: transparent;
           border: none;
-          width: 180px;
+          width: 170px;
         }
 
         span {
           position: relative;
-          width: 180px;
+          width: 170px;
           &:after {
             content: "";
             position: absolute;
-            bottom: -1px;
+            bottom: -2px;
             left: 0px;
-            width: 180px;
+            width: 165px;
             height: 2px;
             background-color: rgb(7, 40, 90);
             border-radius: 3px;
@@ -164,7 +165,7 @@ h2 {
       .cancel {
         position: absolute;
         bottom: 0px;
-        width: 100px;
+        width: 150px;
         height: 25px;
         border: none;
         background: rgb(7, 40, 90);
@@ -182,11 +183,11 @@ h2 {
       }
 
       .submit {
-        right: 17%;
+        right: 6%;
       }
 
       .cancel {
-        right: 40%;
+        left: 6%;
       }
     }
   }

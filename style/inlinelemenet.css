@@ -28,7 +28,7 @@ h1 {
 h2 {
   width: 100%;
   font-size: 30px;
-  letter-spacing: 2.5px;
+  letter-spacing: 3.5px;
   word-spacing: 5px;
   text-align: center;
   padding: 20px 0;
@@ -50,7 +50,7 @@ h2 {
 }
 #root nav .menu {
   display: grid;
-  grid-template-columns: 130px 130px 130px 130px 130px;
+  grid-template-columns: repeat(5, 130px);
   gap: 30px;
 }
 #root nav .menu span {
@@ -112,7 +112,7 @@ h2 {
 }
 #root .form-container form {
   position: relative;
-  width: 500px;
+  width: 412px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -121,7 +121,7 @@ h2 {
   gap: 10px;
 }
 #root .form-container form div {
-  width: 70%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -133,18 +133,18 @@ h2 {
 #root .form-container form div #user__2 {
   background: transparent;
   border: none;
-  width: 180px;
+  width: 170px;
 }
 #root .form-container form div span {
   position: relative;
-  width: 180px;
+  width: 170px;
 }
 #root .form-container form div span:after {
   content: "";
   position: absolute;
-  bottom: -1px;
+  bottom: -2px;
   left: 0px;
-  width: 180px;
+  width: 165px;
   height: 2px;
   background-color: rgb(7, 40, 90);
   border-radius: 3px;
@@ -153,7 +153,7 @@ h2 {
 #root .form-container form .cancel {
   position: absolute;
   bottom: 0px;
-  width: 100px;
+  width: 150px;
   height: 25px;
   border: none;
   background: rgb(7, 40, 90);
@@ -170,10 +170,10 @@ h2 {
   color: rgb(5, 26, 51);
 }
 #root .form-container form .submit {
-  right: 17%;
+  right: 6%;
 }
 #root .form-container form .cancel {
-  right: 40%;
+  left: 6%;
 }
 
 em {
