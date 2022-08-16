@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body {
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 36px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  padding-bottom: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+  word-spacing: 4px;
+}
+
+h2 {
+  width: 100%;
+  font-size: 30px;
+  letter-spacing: 2.5px;
+  word-spacing: 5px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+#root {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+#root nav {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  height: 60px;
+  background: linear-gradient(to right bottom, rgb(65, 163, 56) 10%, transparent 50%), linear-gradient(to left top, grey, transparent);
+}
+#root nav .menu {
+  display: grid;
+  grid-template-columns: 130px 130px 130px 130px 130px;
+  gap: 30px;
+}
+#root nav .menu span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#root nav .menu span button {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-align: center;
+  width: 130px;
+  height: 40px;
+  pointer-events: none;
+}
+#root nav .menu span::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 0px;
+  height: 2px;
+  background-color: yellow;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+#root nav .menu span:hover:after {
+  width: 130px;
+}
+#root .container {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 25px;
+  background: linear-gradient(to top left, transparent 25%, blue);
+}
+#root .container .message {
+  margin-top: 100px;
+  padding: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+#root .form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 500px;
+  background: rgba(235, 238, 240, 0.555);
+  backdrop-filter: blur(3px);
+}
+#root .form-container form {
+  position: relative;
+  width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+#root .form-container form div {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#root .form-container form div label {
+  padding-right: 10px;
+}
+#root .form-container form div #user__1,
+#root .form-container form div #user__2 {
+  background: transparent;
+  border: none;
+  width: 180px;
+}
+#root .form-container form div span {
+  position: relative;
+  width: 180px;
+}
+#root .form-container form div span:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0px;
+  width: 180px;
+  height: 2px;
+  background-color: rgb(7, 40, 90);
+  border-radius: 3px;
+}
+#root .form-container form .submit,
+#root .form-container form .cancel {
+  position: absolute;
+  bottom: 0px;
+  width: 100px;
+  height: 25px;
+  border: none;
+  background: rgb(7, 40, 90);
+  color: white;
+  letter-spacing: 1.5px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+#root .form-container form .submit:hover,
+#root .form-container form .cancel:hover {
+  background: rgba(7, 40, 90, 0.322);
+  color: rgb(5, 26, 51);
+}
+#root .form-container form .submit {
+  right: 17%;
+}
+#root .form-container form .cancel {
+  right: 40%;
+}
+
+em {
+  display: inline-block;
+  border: 1px solid rgba(7, 7, 7, 0);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(30px);
+  box-shadow: 5px 5px 30px black;
+  width: 200px;
+  align-self: center;
+}
+
+@keyframes rotateBlock {
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=inlinelemenet.css.map */

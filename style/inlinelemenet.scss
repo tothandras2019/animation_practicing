@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+$side-width: 130px;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body {
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 36px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  padding-bottom: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+  word-spacing: 4px;
+}
+
+h2 {
+  width: 100%;
+  font-size: 30px;
+  letter-spacing: 2.5px;
+  word-spacing: 5px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+#root {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  nav {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    height: 60px;
+    background: linear-gradient(to right bottom, rgb(65, 163, 56) 10%, transparent 50%), linear-gradient(to left top, grey, transparent);
+
+    .menu {
+      display: grid;
+      grid-template-columns: $side-width $side-width $side-width $side-width $side-width;
+      gap: 30px;
+      span {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        button {
+          border: none;
+          background: transparent;
+          font-size: 20px;
+          font-family: "Quicksand", sans-serif;
+          font-weight: 500;
+          letter-spacing: 4px;
+          text-align: center;
+          width: $side-width;
+          height: 40px;
+          pointer-events: none;
+        }
+
+        &::after {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          content: "";
+          width: 0px;
+          height: 2px;
+          background-color: yellow;
+          border-radius: 5px;
+          transition: width 0.3s ease;
+        }
+
+        &:hover:after {
+          width: $side-width;
+        }
+      }
+    }
+  }
+
+  .container {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 25px;
+    background: linear-gradient(to top left, transparent 25%, blue);
+
+    .message {
+      margin-top: 100px;
+      padding: 20px;
+      font-family: "Raleway", sans-serif;
+      font-weight: 500;
+    }
+  }
+  .form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+    background: rgba(235, 238, 240, 0.555);
+    backdrop-filter: blur(3px);
+    form {
+      position: relative;
+      width: 500px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+
+      div {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        label {
+          padding-right: 10px;
+        }
+
+        #user__1,
+        #user__2 {
+          background: transparent;
+          border: none;
+          width: 180px;
+        }
+
+        span {
+          position: relative;
+          width: 180px;
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0px;
+            width: 180px;
+            height: 2px;
+            background-color: rgb(7, 40, 90);
+            border-radius: 3px;
+          }
+        }
+      }
+
+      .submit,
+      .cancel {
+        position: absolute;
+        bottom: 0px;
+        width: 100px;
+        height: 25px;
+        border: none;
+        background: rgb(7, 40, 90);
+        color: white;
+        letter-spacing: 1.5px;
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+
+        &:hover {
+          background: rgba(7, 40, 90, 0.322);
+          color: rgb(5, 26, 51);
+        }
+      }
+
+      .submit {
+        right: 17%;
+      }
+
+      .cancel {
+        right: 40%;
+      }
+    }
+  }
+}
+
+em {
+  display: inline-block;
+  border: 1px solid rgba(7, 7, 7, 0);
+  background: rgb(255, 255, 255, 0.5);
+  backdrop-filter: blur(30px);
+  box-shadow: 5px 5px 30px black;
+  width: 200px;
+  align-self: center;
+
+  // animation-name: rotateBlock;
+  // animation-duration: 2s;
+  // animation-fill-mode: forwards;
+  // animation-timing-function: linear;
+  // animation-iteration-count: infinite;
+}
+
+@keyframes rotateBlock {
+  to {
+    transform: rotate(360deg);
+  }
+}
