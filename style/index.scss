@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+$background-color: rgb(134, 211, 134);
+$container-background-color: rgb(43, 163, 103);
+$box-background-color: rgb(204, 83, 83);
+$text-color: rgb(59, 7, 7);
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  color: $text-color;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+  background-color: $background-color;
+
+  .container {
+    position: relative;
+    width: 70%;
+    height: 50%;
+    background-color: $container-background-color;
+
+    .box-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% - 20px);
+      height: calc(100% - 100px);
+      display: grid;
+      grid-template-columns: repeat(5, 208px);
+
+      .box {
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        align-self: center;
+        width: 200px;
+        height: 100px;
+        background-color: $box-background-color;
+        border-radius: 3px;
+        border: 1px solid rgb(105, 9, 9);
+      }
+    }
+  }
+}
