@@ -40,7 +40,7 @@ section {
       width: calc(100% - 20px);
       height: calc(100% - 100px);
       display: grid;
-      grid-template-columns: repeat(5, 208px);
+      grid-template-columns: repeat(5, 20%);
 
       .box {
         display: flex;
@@ -53,6 +53,14 @@ section {
         background-color: $box-background-color;
         border-radius: 3px;
         border: 1px solid rgb(105, 9, 9);
+
+        @media screen and (max-width: 1500px) {
+          background-color: grey;
+          width: 150px;
+          a {
+            font-size: 13px;
+          }
+        }
       }
     }
   }

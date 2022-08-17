@@ -33,7 +33,7 @@ section .container .box-container {
   width: calc(100% - 20px);
   height: calc(100% - 100px);
   display: grid;
-  grid-template-columns: repeat(5, 208px);
+  grid-template-columns: repeat(5, 20%);
 }
 section .container .box-container .box {
   display: flex;
@@ -46,4 +46,13 @@ section .container .box-container .box {
   background-color: rgb(204, 83, 83);
   border-radius: 3px;
   border: 1px solid rgb(105, 9, 9);
+}
+@media screen and (max-width: 1500px) {
+  section .container .box-container .box {
+    background-color: grey;
+    width: 150px;
+  }
+  section .container .box-container .box a {
+    font-size: 13px;
+  }
 }/*# sourceMappingURL=index.css.map */
