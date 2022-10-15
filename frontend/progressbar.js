@@ -24,10 +24,11 @@ function SetCardItems(root) {
   const cardItemsElements = root.querySelectorAll('.card-items')
   cardItemsElements.forEach((cardItemsElement) => {
     let timeID = null
-    eventSubscrition(cardItemsElement, timeID)
+    eventSubscritions(cardItemsElement, timeID)
   })
 }
-function eventSubscrition(subscribedElement, timeID) {
+
+function eventSubscritions(subscribedElement, timeID) {
   subscribedElement.addEventListener(`mouseenter`, (event) => {
     const button = subscribedElement.querySelector('button')
     button.classList.remove('inactivate')
@@ -35,6 +36,7 @@ function eventSubscrition(subscribedElement, timeID) {
 
     setProgressBarStrokeFill()
   })
+
   subscribedElement.addEventListener(`mouseleave`, (event) => {
     const button = subscribedElement.querySelector('button')
     button.classList.add('inactivate')
