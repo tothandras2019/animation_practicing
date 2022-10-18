@@ -7,6 +7,7 @@ $box-secondary-background-color: rgba(35, 33, 33, 0.779);
 $text-color: rgb(59, 7, 7);
 $border-halo-color: rgba(242, 6, 6, 0.538);
 $text-color: rgb(204, 55, 55);
+$break-point: 1600px;
 
 * {
   padding: 0;
@@ -50,10 +51,12 @@ section {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: calc(100% - 20px);
+      // width: 100%;
       height: calc(100% - 100px);
       display: grid;
-      grid-template-columns: repeat(5, 20%);
+      grid-template-columns: repeat(4, 25%);
+      gap: 3px;
+      box-sizing: border-box;
 
       .box {
         display: flex;
@@ -61,7 +64,9 @@ section {
         justify-self: center;
         align-items: center;
         align-self: center;
-        width: 250px;
+
+        width: 220px;
+        max-width: 250px;
         height: 100px;
         background-color: $box-background-color;
         border-radius: 1px;
@@ -69,6 +74,7 @@ section {
         border-bottom-right-radius: 20px;
         border: 1px solid $container-background-color;
         transition: 0.5s;
+        font-size: 20px;
 
         &:hover {
           width: calc(100% - 20px);
@@ -82,6 +88,39 @@ section {
 
         a {
           transition: all 0.5s;
+        }
+      }
+
+      @media screen and (max-width: 1600px) {
+        .box {
+          background-color: yellow;
+          width: 100px;
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1600px) {
+    .container {
+      height: 50%;
+      width: 50%;
+      .box-container {
+        display: grid;
+        grid-template-columns: repeat(3, 50%);
+        height: fit-content;
+        width: fit-content;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .container {
+        height: 80%;
+        width: 90%;
+
+        .box-container {
+          display: grid;
+          grid-template-columns: repeat(2, 50%);
         }
       }
     }
