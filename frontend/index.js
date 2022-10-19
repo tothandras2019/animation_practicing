@@ -48,3 +48,19 @@ const findLowestFuelLevelMercedes = cars
   .filter((car) => car.type === 'Mercedes')
   .reduce((prevCar, car) => (prevCar.fuelLevel < car.fuelLevel ? prevCar : car))
 console.log(findLowestFuelLevelMercedes)
+
+const deepData = []
+
+function* addNumbers(num) {
+  let counter = 0
+  while (true) {
+    yield (counter += num)
+  }
+}
+
+let generate = addNumbers(10)
+
+console.log(generate.next().value)
+console.log(generate.next().value)
+console.log(generate.next().value)
+console.log(generate.next().value)

@@ -34,9 +34,16 @@ section {
   background-position: center;
   background-size: cover;
 
+  .search {
+    display: flex;
+    width: 110px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .container {
     position: relative;
-    width: 70%;
+    width: 90%;
     height: 50%;
     background-color: $container-background-color;
     backdrop-filter: blur(1px);
@@ -44,18 +51,17 @@ section {
     border: 2px solid $border-halo-color;
     box-shadow: 0px 0px 50px rgba(242, 6, 6, 0.831);
     text-transform: uppercase;
-    text-shadow: 2px 2px 7px rgb(131, 79, 214);
+    text-shadow: 2px 2px 7px rgb(2, 1, 15);
 
     .box-container {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      // width: 100%;
       height: calc(100% - 100px);
       display: grid;
-      grid-template-columns: repeat(4, 25%);
-      gap: 3px;
+      grid-template-columns: repeat(4, 250px);
+      gap: 10px;
       box-sizing: border-box;
 
       .box {
@@ -93,8 +99,8 @@ section {
 
       @media screen and (max-width: 1600px) {
         .box {
-          background-color: yellow;
-          width: 100px;
+          background-color: rgb(23, 49, 66);
+          //width: 200px;
           a {
             font-size: 12px;
           }
@@ -102,13 +108,16 @@ section {
       }
     }
   }
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 1200px) {
     .container {
-      height: 50%;
-      width: 50%;
+      height: 70%;
+      width: 90%;
       .box-container {
+        .box {
+          width: 150px;
+        }
         display: grid;
-        grid-template-columns: repeat(3, 50%);
+        grid-template-columns: repeat(3, 150px);
         height: fit-content;
         width: fit-content;
       }
@@ -119,8 +128,12 @@ section {
         width: 90%;
 
         .box-container {
+          .box {
+            width: 100px;
+          }
+
           display: grid;
-          grid-template-columns: repeat(2, 50%);
+          grid-template-columns: repeat(2, 150px);
         }
       }
     }
